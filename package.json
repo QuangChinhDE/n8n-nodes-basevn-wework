@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-basevn-wework",
-	"version": "0.1.0",
+	"version": "1.0.7",
 	"description": "n8n node for BaseVN - App Wework API - Manage projects, tasks, departments with flexible field structures and webhook triggers",
 	"license": "MIT",
 	"homepage": "https://github.com/QuangChinhDE/n8n-nodes-basevn-wework",
