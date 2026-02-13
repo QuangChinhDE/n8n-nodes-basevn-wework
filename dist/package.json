@@ -1,6 +1,6 @@
 {
-    "name": "@quangchinh/n8n-nodes-basevn-wework",
-    "version": "1.0.7",
+    "name": "n8n-nodes-basevn-wework",
+    "version": "1.0.8",
     "description": "n8n node for BaseVN - App Wework API - Manage projects, tasks, departments with flexible field structures and webhook triggers",
     "license": "MIT",
     "homepage": "https://github.com/QuangChinhDE/n8n-nodes-basevn-wework",
@@ -13,12 +13,12 @@
         "api-integration"
     ],
     "author": {
-        "name": "BaseVN",
-        "email": "support@basevn.com"
+        "name": "QuangChinh",
+        "email": "quangchinh@basevn.com"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/QuangChinhDE/n8n-nodes-basevn-wework.git"
+        "url": "git+https://github.com/QuangChinhDE/n8n-nodes-basevn-wework.git"
     },
     "scripts": {
         "build": "n8n-node build",
