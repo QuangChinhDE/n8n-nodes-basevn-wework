@@ -1,0 +1,18 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getFull = getFull;
+const transport_1 = require("../../shared/transport");
+const utils_1 = require("../../shared/utils");
+async function getFull(index) {
+    const id = this.getNodeParameter('id', index);
+    const returnData = this.getNodeParameter('returnData', index, 'full');
+    const body = {
+        id,
+    };
+    const response = await transport_1.weworkApiRequest.call(this, 'POST', '/extapi/v3/project/get.full', body);
+    if (returnData !== 'full') {
+        return (0, utils_1.processResponse)(response, returnData);
+    }
+    return response;
+}
+//# sourceMappingURL=getFull.js.map

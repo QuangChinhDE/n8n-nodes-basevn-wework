@@ -1,0 +1,22 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.addFollowers = exports.deleteTask = exports.markDone = exports.listByProject = exports.get = exports.editExtra = exports.edit = exports.createSubtask = exports.create = void 0;
+var create_1 = require("./create");
+Object.defineProperty(exports, "create", { enumerable: true, get: function () { return create_1.create; } });
+var createSubtask_1 = require("./createSubtask");
+Object.defineProperty(exports, "createSubtask", { enumerable: true, get: function () { return createSubtask_1.createSubtask; } });
+var edit_1 = require("./edit");
+Object.defineProperty(exports, "edit", { enumerable: true, get: function () { return edit_1.edit; } });
+var editExtra_1 = require("./editExtra");
+Object.defineProperty(exports, "editExtra", { enumerable: true, get: function () { return editExtra_1.editExtra; } });
+var get_1 = require("./get");
+Object.defineProperty(exports, "get", { enumerable: true, get: function () { return get_1.get; } });
+var listByProject_1 = require("./listByProject");
+Object.defineProperty(exports, "listByProject", { enumerable: true, get: function () { return listByProject_1.listByProject; } });
+var markDone_1 = require("./markDone");
+Object.defineProperty(exports, "markDone", { enumerable: true, get: function () { return markDone_1.markDone; } });
+var deleteTask_1 = require("./deleteTask");
+Object.defineProperty(exports, "deleteTask", { enumerable: true, get: function () { return deleteTask_1.deleteTask; } });
+var addFollowers_1 = require("./addFollowers");
+Object.defineProperty(exports, "addFollowers", { enumerable: true, get: function () { return addFollowers_1.addFollowers; } });
+//# sourceMappingURL=index.js.map
