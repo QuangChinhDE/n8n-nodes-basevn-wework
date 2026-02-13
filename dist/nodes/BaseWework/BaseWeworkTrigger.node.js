@@ -33,21 +33,6 @@ class BaseWeworkTrigger {
                     noDataExpression: true,
                     options: [
                         {
-                            name: 'On Task Created',
-                            value: 'taskCreated',
-                            description: 'Trigger when a new task is created',
-                        },
-                        {
-                            name: 'On Task Done',
-                            value: 'taskDone',
-                            description: 'Trigger when a task is marked as done',
-                        },
-                        {
-                            name: 'On Task Status Updated',
-                            value: 'taskStatusUpdated',
-                            description: 'Trigger when task status changes',
-                        },
-                        {
                             name: 'On Subtask Created',
                             value: 'subtaskCreated',
                             description: 'Trigger when a new subtask is created',
@@ -62,11 +47,27 @@ class BaseWeworkTrigger {
                             value: 'subtaskStatusUpdated',
                             description: 'Trigger when subtask status changes',
                         },
+                        {
+                            name: 'On Task Created',
+                            value: 'taskCreated',
+                            description: 'Trigger when a new task is created',
+                        },
+                        {
+                            name: 'On Task Done',
+                            value: 'taskDone',
+                            description: 'Trigger when a task is marked as done',
+                        },
+                        {
+                            name: 'On Task Status Updated',
+                            value: 'taskStatusUpdated',
+                            description: 'Trigger when task status changes',
+                        },
                     ],
                     default: 'taskCreated',
                     required: true,
                 },
             ],
+            usableAsTool: true,
         };
     }
     async webhook() {

@@ -5,7 +5,7 @@ class BaseWeworkApi {
     constructor() {
         this.name = 'baseWeworkApi';
         this.displayName = 'BaseVN Wework API';
-        this.icon = 'file:wework.svg';
+        this.icon = 'file:../icons/wework.svg';
         this.documentationUrl = 'https://documenter.getpostman.com/view/1345096/SztA68Az?version=latest';
         this.properties = [
             {

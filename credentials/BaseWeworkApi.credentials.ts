@@ -10,7 +10,7 @@ export class BaseWeworkApi implements ICredentialType {
 
 	displayName = 'BaseVN Wework API';
 
-	icon: Icon = 'file:wework.svg';
+	icon: Icon = 'file:../icons/wework.svg';
 
 	documentationUrl = 'https://documenter.getpostman.com/view/1345096/SztA68Az?version=latest';
 

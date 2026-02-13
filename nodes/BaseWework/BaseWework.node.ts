@@ -1,5 +1,6 @@
 import {
 	NodeConnectionTypes,
+	type IDataObject,
 	type IExecuteFunctions,
 	type INodeExecutionData,
 	type INodeType,
@@ -87,7 +88,7 @@ export class BaseWework implements INodeType {
 
 		for (let i = 0; i < items.length; i++) {
 			try {
-				let responseData: any;
+				let responseData: IDataObject = {};
 
 				if (resource === 'project') {
 					const operation = this.getNodeParameter('operation', i) as string;

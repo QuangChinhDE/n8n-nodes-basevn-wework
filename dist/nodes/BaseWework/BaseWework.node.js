@@ -105,7 +105,7 @@ class BaseWework {
         const resource = this.getNodeParameter('resource', 0);
         for (let i = 0; i < items.length; i++) {
             try {
-                let responseData;
+                let responseData = {};
                 if (resource === 'project') {
                     const operation = this.getNodeParameter('operation', i);
                     if (operation === 'create') {
