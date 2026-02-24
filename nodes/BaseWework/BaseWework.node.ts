@@ -88,7 +88,7 @@ export class BaseWework implements INodeType {
 
 		for (let i = 0; i < items.length; i++) {
 			try {
-				let responseData: IDataObject = {};
+				let responseData: IDataObject | IDataObject[] = {};
 
 				if (resource === 'project') {
 					const operation = this.getNodeParameter('operation', i) as string;
@@ -146,10 +146,20 @@ export class BaseWework implements INodeType {
 					}
 				}
 
-				returnData.push({
-					json: responseData,
-					pairedItem: i,
-				});
+				// Handle both array and single object responses
+				if (Array.isArray(responseData)) {
+					responseData.forEach((item) => {
+						returnData.push({
+							json: item,
+							pairedItem: i,
+						});
+					});
+				} else {
+					returnData.push({
+						json: responseData,
+						pairedItem: i,
+					});
+				}
 			} catch (error) {
 				if (this.continueOnFail()) {
 					returnData.push({

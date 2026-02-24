@@ -21,7 +21,24 @@ function handleApiError(error) {
 function processResponse(response, selector) {
     if (selector && selector.trim() !== '') {
         if (response[selector]) {
-            return response[selector];
+            const data = response[selector];
+            if (Array.isArray(data) && data.length > 0 && Array.isArray(data[0])) {
+                return data.flat();
+            }
+            if (typeof data === 'object' && !Array.isArray(data)) {
+                const flattened = { ...data };
+                const fieldsToFlatten = ['milestones', 'tasks', 'subtasks', 'tasklists'];
+                fieldsToFlatten.forEach(field => {
+                    if (flattened[field] && Array.isArray(flattened[field])) {
+                        const arr = flattened[field];
+                        if (arr.length > 0 && Array.isArray(arr[0])) {
+                            flattened[field] = arr.flat();
+                        }
+                    }
+                });
+                return flattened;
+            }
+            return data;
         }
         throw new Error(`Selector field '${selector}' not found in response. Available fields: ${Object.keys(response).join(', ')}`);
     }

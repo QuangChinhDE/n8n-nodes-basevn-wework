@@ -10,7 +10,7 @@ async function createSubtask(index) {
     const additionalFields = this.getNodeParameter('additionalFields', index, {});
     const body = {
         username,
-        parent_id,
+        id: parent_id,
         name,
         ...additionalFields,
     };

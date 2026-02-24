@@ -10,7 +10,7 @@ export async function createSubtask(this: IExecuteFunctions, index: number): Pro
 
 	const body: IDataObject = {
 		username,
-		parent_id,
+		id: parent_id,
 		name,
 		...additionalFields,
 	};

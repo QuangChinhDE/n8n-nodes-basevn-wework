@@ -6,4 +6,4 @@ export declare function handleApiError(error: Error & {
         statusText?: string;
     };
 }): string;
-export declare function processResponse(response: IDataObject, selector?: string): IDataObject;
+export declare function processResponse(response: IDataObject, selector?: string): IDataObject | IDataObject[];

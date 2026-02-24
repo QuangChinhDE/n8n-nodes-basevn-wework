@@ -175,10 +175,20 @@ class BaseWework {
                         responseData = await tasklist.get.call(this, i);
                     }
                 }
-                returnData.push({
-                    json: responseData,
-                    pairedItem: i,
-                });
+                if (Array.isArray(responseData)) {
+                    responseData.forEach((item) => {
+                        returnData.push({
+                            json: item,
+                            pairedItem: i,
+                        });
+                    });
+                }
+                else {
+                    returnData.push({
+                        json: responseData,
+                        pairedItem: i,
+                    });
+                }
             }
             catch (error) {
                 if (this.continueOnFail()) {

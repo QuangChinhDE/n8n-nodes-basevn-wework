@@ -2,7 +2,7 @@ import type { IExecuteFunctions, IDataObject } from 'n8n-workflow';
 import { weworkApiRequest } from '../../shared/transport';
 import { processResponse } from '../../shared/utils';
 
-export async function getFull(this: IExecuteFunctions, index: number): Promise<IDataObject> {
+export async function getFull(this: IExecuteFunctions, index: number): Promise<IDataObject | IDataObject[]> {
 	const id = this.getNodeParameter('id', index) as string;
 	const returnData = this.getNodeParameter('returnData', index, 'full') as string;
 

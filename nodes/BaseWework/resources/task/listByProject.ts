@@ -2,7 +2,7 @@ import type { IExecuteFunctions, IDataObject } from 'n8n-workflow';
 import { weworkApiRequest } from '../../shared/transport';
 import { cleanBody, processResponse } from '../../shared/utils';
 
-export async function listByProject(this: IExecuteFunctions, index: number): Promise<IDataObject> {
+export async function listByProject(this: IExecuteFunctions, index: number): Promise<IDataObject | IDataObject[]> {
 	const id = this.getNodeParameter('id', index) as string;
 	const username = this.getNodeParameter('username', index) as string;
 	const page = this.getNodeParameter('page', index) as number;
